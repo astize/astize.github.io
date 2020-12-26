@@ -1,7 +1,23 @@
 body {
 	font-size: 18px;
+	margin-left:auto;
+	margin-right:auto;
+	width: 100%;
 }
 p {
-	font-size: 32px;
-	width:50%;
+	padding-top: 650px;
+	padding-left:200px;
+	font-size: 64px;
+	width:880px;
+}
+.output {
+	background-image: url("sfw.png");
+	height: 1566px;
+	width: 1095px;
+	background-repeat: no-repeat;
+}
+@media print {
+.topbar {
+	display: none !important;
+}
 }
