@@ -6,18 +6,120 @@ function randomValueFromArray(array){
   return array[random];
 }
 
+let storyTextD = ':namesA: and :namesB: :startWork: on the :equipment:. A :conversation:. :talkedAbout::pointA::pointB::pointC::pointD:';
 let storyText = 'The :namesA: and the :namesB: :bravo: :alpha: :delta: :charlie:.';
 let storyTextB = 'The :namesA: and the :namesB: :bravoB: :alphaB: :deltaB: :charlieB: :echoB:';
 let storyTextC = ':namesC: :stupidA: :namesD: :stupidB: :stupidC: :stupidD: because :stupidE:'
 
+
+
+let startWork = [
+	"were about to start work",
+	"were going to start work",
+	"had just about begun working",
+	"were just about to begin work",
+	"were preparing to start work",
+	"were about to begin routine maintenance",
+	"were preparing for maintenance",
+];
+let equipment = [
+	"lube oil purifier",
+	"AC compressor",
+	"oily water separator",
+	"emergency lighting circuit",
+	"oil filters",
+	"reefer sockets",
+	"fire dampers",
+	"domestic hot water",
+	"bain marie",
+	"engine room fans",
+	"chlorifier",
+	"DG5 turbo",
+	"forward fuel module",
+	"lathe",
+	"drill press",
+	"grinder",
+	"starboard stabilizer",
+	"crew mess dishwasher",
+];
+let conversation = [
+	"toolbox talk was held",
+	"small conversation occurred",
+	"quick meeting happened",
+	"small talk happened",
+	"quick chat occurred",
+	"safety conversation occurred",
+	"pre-work meeting was held",
+	"safe work conversation was held",
+	"discussion about the job happened",
+	"quick chat about the work happened",
+];
+let talkedAbout = [
+	"Key points discussed were",
+	"Some of the things mentioned were",
+	"A few of the things mentioned were",
+	"Some of the things discussed were",
+	"Some really good points were made, including",
+	"Some great discussed went on about",
+	"Excellent points were made regarding",
+];
+let pointA = [
+	"",
+	"",
+	"",
+	"",
+	": fire hazards",
+	": ignition sources nearby",
+	": risk of a fire starting",
+	": danger of electrocution",
+	": risk of electrocution",
+	": possibility of a shock hazard",
+];
+let pointB = [
+	" ",
+	" ",
+	" ",
+	", potential tripping hazards",
+	", a couple tripping hazards nearby",
+	", dangerous trip hazards in the area",
+	", sharp, protruding edges",
+	", potential risk of cutting injuries",
+	", the chance that someone could cut themselves",
+];
+let pointC = [
+	" ",
+	" ",
+	" ",
+	", a burning hazard",
+	", someone could burn themselves",
+	", danger of burning their hands",
+	", using the right tool for the work",
+	", making sure to use the right tool",
+	", careful selection of tools used",
+	", cleaning up properly afterwards",
+];
+let pointD = [
+	" ",
+	" ",
+	" ",
+	", slip and fall hazards",
+	", dangerous heights",
+	", mislabelled equipment",
+	", improperly secured gear",
+	", working in a rough sea state",
+	", danger of working on a ladder",
+	", the importance of correct labelling",
+]
 let namesA = [
 	"Chief Engineer",
 	"Electrician",
 	"First Engineer",
-	"First Mate",
+	"Maintenance Electrician",
+	"Maintenance Engineer",
 ];
 let namesB = [
-	"Second Mate",
+	"Third Engineer",
+	"Contractor",
 	"Second Engineer",
 	"ETO",
 	"Cadet",
@@ -200,6 +302,7 @@ function result() {
   let newStory = storyText;
   let newStoryB = storyTextB;
   let newStoryC = storyTextC;
+  let newStoryD = storyTextD;
   let aItem = randomValueFromArray(namesA);
   let bItem = randomValueFromArray(namesB);
   let cItem = randomValueFromArray(alpha);
@@ -218,7 +321,14 @@ function result() {
   let stupidCItem = randomValueFromArray(stupidC);
   let stupidDItem = randomValueFromArray(stupidD);
   let stupidEItem = randomValueFromArray(stupidE);
-  
+  let storyAitemA = randomValueFromArray(startWork);
+  let storyAitemB = randomValueFromArray(equipment);
+  let storyAitemC = randomValueFromArray(conversation);
+  let storyAitemD = randomValueFromArray(talkedAbout);
+  let storyAitemE = randomValueFromArray(pointA);
+  let storyAitemF = randomValueFromArray(pointB);
+  let storyAitemG = randomValueFromArray(pointC);
+  let storyAitemH = randomValueFromArray(pointD);
 
   newStory = newStory.replace(':namesA:',aItem);
   newStory = newStory.replace(':namesB:',bItem);
@@ -242,26 +352,39 @@ function result() {
   newStoryC = newStoryC.replace(':stupidC:',stupidCItem);
   newStoryC = newStoryC.replace(':stupidD:',stupidDItem);
   newStoryC = newStoryC.replace(':stupidE:',stupidEItem);
-
-
-  if(document.getElementById("font1").checked) {
+  
+  newStoryD = newStoryD.replace(':namesA:',aItem);
+  newStoryD = newStoryD.replace(':namesB:',bItem);
+  newStoryD = newStoryD.replace(':startWork:',storyAitemA);
+  newStoryD = newStoryD.replace(':equipment:',storyAitemB);
+  newStoryD = newStoryD.replace(':conversation:',storyAitemC);
+  newStoryD = newStoryD.replace(':talkedAbout:',storyAitemD);
+  newStoryD = newStoryD.replace(':pointA:',storyAitemE);
+  newStoryD = newStoryD.replace(':pointB:',storyAitemF);
+  newStoryD = newStoryD.replace(':pointC:',storyAitemG);
+  newStoryD = newStoryD.replace(':pointD:',storyAitemH);
+  
+if(document.getElementById("font1").checked) {
 	  document.querySelector('p').style.fontFamily = "Just Me Again Down Here,arial";
-  } else if(document.getElementById("font2").checked) {
+} else if(document.getElementById("font2").checked) {
 	  document.querySelector('p').style.fontFamily = "Long Cang,arial";
-  } else if(document.getElementById("font3").checked) {
+} else if(document.getElementById("font3").checked) {
 	  document.querySelector('p').style.fontFamily = "Indie Flower,arial";
-  } else if(document.getElementById("font4").checked) {
+} else if(document.getElementById("font4").checked) {
 	  document.querySelector('p').style.fontFamily = "Gochi Hand,arial";
-  }
+}
  
-  if(document.getElementById("story1").checked) {
+if(document.getElementById("story1").checked) {
   story.textContent = newStory;
   story.style.visibility = 'visible';
-  } else if(document.getElementById("story2").checked) {
+} else if(document.getElementById("story2").checked) {
 	story.textContent = newStoryB;
 	story.style.visibility = 'visible';
 } else if(document.getElementById("story3").checked) {
-	  story.textContent = newStoryC;
+story.textContent = newStoryC;
   story.style.visibility = 'visible';
+} else if(document.getElementById("story0").checked) {
+story.textContent = newStoryD;
+story.style.visibility = 'visible';
 }
 }
