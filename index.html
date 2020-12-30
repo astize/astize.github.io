@@ -1,1 +1,57 @@
-hello, world
+<!doctype html>
+<html>
+<head>
+<title>Home | Levi Dubbelman</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;400;600&display=swap');
+</style> 
+<link rel="stylesheet" href="style.css">
+</head>
+<body id="body" onload="timeSince()" style="opacity:0;">
+<div id="main">
+<h1 class="strong">Levi Dubbelman <img src="lsd.svg" width="6.6%" /></h1>
+<h2>Electro-Technical Officer <span class="minor soft">... for</span> <span class="minor soft" id="timeSince"></span></h2>
+<h3><div id="menu">
+<a id="self" href="#">About</a>
+<a href="work.html">Work</a>
+</div>
+</h3>
+<p>Hello, and welcome— to a personal webpage (graciously hosted by <a href="https://www.github.com/">GitHub</a>). Here you'll find a few of my previous works that you may find useful— such as my <a href="work.html">assignments</a> and their relevant modules from the now-defunct New Zealand Maritime School ETO programme.</p>
+<p>I plan to migrate this site and its contents to a unique domain later in 2020. For now, it remains barren. Thanks for visiting, all the same.</p>
+<p>Kind Wishes,</p>
+<p>Levi Dubbelman</p>
+</div>
+<script>  
+        function timeSince() { 
+            var fade = document.getElementById("body"); 
+			var fadeMenu = document.getElementById("menu"); 
+            var opacity = 0; 
+			var opacityMenu = 0;
+			var custom_date_formats = {
+				past: [
+					{ ceiling: null, text: "$years years, $months months and $days days." }
+					]
+			}
+            var intervalID = setInterval(function() { 
+                if (opacity < 1) { 
+                    opacity = opacity + 0.02
+                    fade.style.opacity = opacity; 
+                } else { 
+                    clearInterval(intervalID); 
+                } 
+            }, 10); 
+			var intervalB = setInterval(function() { 
+                if (opacityMenu < 1) { 
+                    opacityMenu = opacityMenu + 0.01
+                    fadeMenu.style.opacity = opacityMenu; 
+                } else { 
+                    clearInterval(intervalB); 
+                } 
+            }, 10); 
+			var timeSince = humanized_time_span("2019/02/03 08:30:00", "", custom_date_formats);
+			document.getElementById("timeSince").innerHTML = timeSince;
+        } 
+</script>
+<script src="time.js"></script> 
+</body>
+</html>

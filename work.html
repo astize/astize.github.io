@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+<title>Home | Levi Dubbelman</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;400;600&display=swap');
+</style> 
+<link rel="stylesheet" href="style.css">
+</head>
+<body id="body" onload="timeSince()" style="opacity:0;">
+<div id="main">
+<h1 class="strong">Levi Dubbelman <img src="lsd.svg" width="6.6%" /></h1>
+<h2>Electro-Technical Officer <span class="minor soft">... for</span> <span class="minor soft" id="timeSince"></span></h2>
+<h3><div id="menu">
+<a href="index.html">About</a>
+<a id="self" href="#">Work</a>
+</div>
+</h3>
+<p><a href="modules/942.466">942.466 ¦ Safe Use of Electrical Equipment</a></p>
+<p><a href="modules/942.467">942.467 ¦ Electrical Maintenance and Repair Procedures</a></p>
+<p><a href="modules/942.468">942.468 ¦ Monitoring and operation of shipboard electrical systems and machinery</a></p>
+<p><a href="modules/942.469">942.469 ¦ Shipboard Maintenance and Repair Procedures</a></p>
+<p><a href="modules/942.470">942.470 ¦ Electrical and Electronic Measuring Equipment, Basic Electrical Fault Finding</a></p>
+<p><a href="modules/942.573">942.573 ¦ Marine Electro-technology Science, Electronics and Electrical Machines</a></p>
+<p><a href="modules/942.575">942.575 ¦ Operation of Propulsion and Auxiliary Control Systems</a></p>
+<p><a href="modules/942.578">942.578 ¦ Maintenance and Repair of Electrical and Electronic Equipment</a></p>
+<p><a href="modules/942.580">942.580 ¦ Maintenance and Repair of Automation and Control Systems of Main Propulsion and Auxiliary Systems</a></p>
+<p><a href="modules/942.593">942.593 ¦ Mathematics</a></p>
+<p><a href="modules/942.594">942.594 ¦ Mechanics & Physics</a></p>
+<p><a href="modules/942.617">942.617 ¦ High Voltage (Operations)</a></p>
+<p><a href="modules/942.634">942.634 ¦ Operation of Generators and Distribution Systems</a></p>
+<p><a href="modules/942.637">942.637 ¦ Marine Computer Networks</a></p>
+<p><a href="modules/942.642">942.642 ¦ Maintenance and Repair of Bridge Navigation Equipment and Ship Communication Systems</a></p>
+<p><a href="modules/942.644">942.644 ¦ Maintenance and Repair of Electrical, Electronic and Control Systems of Deck Machinery and Cargo Handling Equipment</a></p>
+<p><a href="modules/942.646">942.646 ¦ Maintenance and Repair of Control and Safety Systems of Shipboard Hotel Equipment</a></p>
+</div>
+<script>  
+        function timeSince() { 
+            var fade = document.getElementById("body"); 
+			var fadeMenu = document.getElementById("menu"); 
+            var opacity = 0; 
+			var opacityMenu = 0;
+			var custom_date_formats = {
+				past: [
+					{ ceiling: null, text: "$years years, $months months and $days days." }
+					]
+			}
+            var intervalID = setInterval(function() { 
+                if (opacity < 1) { 
+                    opacity = opacity + 0.02
+                    fade.style.opacity = opacity; 
+                } else { 
+                    clearInterval(intervalID); 
+                } 
+            }, 10); 
+			var intervalB = setInterval(function() { 
+                if (opacityMenu < 1) { 
+                    opacityMenu = opacityMenu + 0.01
+                    fadeMenu.style.opacity = opacityMenu; 
+                } else { 
+                    clearInterval(intervalB); 
+                } 
+            }, 10); 
+			var timeSince = humanized_time_span("2019/02/03 08:30:00", "", custom_date_formats);
+			document.getElementById("timeSince").innerHTML = timeSince;
+        } 
+</script>
+<script src="time.js"></script> 
+</body>
+</html>

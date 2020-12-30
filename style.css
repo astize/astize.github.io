@@ -1,0 +1,80 @@
+body {
+	font-family: 'Inter', sans-serif;
+	background-color:#1F1A17;
+	font-weight: 400;
+	font-size:100%;
+	color:#eee;
+}
+#main {
+	margin-left:-5%;
+	padding-left:7.5%;
+	margin-top:-5%;
+	padding-top:6%;
+	width:75%;
+	margin-right:auto;
+	background-color:#1F1A17;
+}
+#menu {
+	width:15%;
+	text-align: justify;
+	white-space: nowrap;
+	margin-left:auto;
+	margin-right:6%;
+	float:right;
+}
+#menu > a {
+	margin-right:10%;
+	margin-left:5%;
+	color:#F6C315;
+	text-decoration:none;
+}
+#menu > #self {
+	border-bottom:0.5vw solid #1b6734;
+	padding-bottom:0.2vw;
+}
+#menu > a:hover {
+	border-bottom:0.25vw solid #1b6734;
+	padding-bottom:0.2vw;
+}
+h1 {
+	font-size:8vw;
+	white-space: nowrap;
+	margin-bottom:-4%;
+	margin-top:-1%;
+}
+h2 {
+	font-size:3.5vw;
+	line-height:0.8em;
+	margin-bottom:-2%;
+	margin-left:0.5%;
+}
+h3 {
+	font-size:2vw;
+	padding-bottom:5%;
+}
+a {
+	color:#F6C315;
+	text-decoration:none;
+}
+a:hover {
+	text-decoration:underline;
+	text-decoration-color: #1b6734;
+}
+
+.minor {
+	font-size:0.5em;
+}
+p {
+	margin-left:1.1%;
+	line-height:2em;
+	font-size:115%;	
+}
+.soft {
+	font-weight:100;
+}
+.strong {
+	font-weight:600;
+}
+.oblique {
+	font-style:oblique;
+}

@@ -1,0 +1,45 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP Diesel_EngineV12
+D DC Motor
+K DC Motor
+F ~
+$ENDCMP
+#
+$CMP Diesel_EngineV16
+D DC Motor
+K DC Motor
+F ~
+$ENDCMP
+#
+$CMP Diesel_Engine_V12
+D DC Motor
+K DC Motor
+F ~
+$ENDCMP
+#
+$CMP Motor_AC_Termination
+D AC Motor
+K AC Motor
+F ~
+$ENDCMP
+#
+$CMP OUTGOING
+D Diode symbol for simulation only. Pin order incompatible with official kicad footprints
+K simulation
+F ~
+$ENDCMP
+#
+$CMP Transformer2W
+D AC Motor
+K AC Motor
+F ~
+$ENDCMP
+#
+$CMP TunnelThruster
+D Diode symbol for simulation only. Pin order incompatible with official kicad footprints
+K simulation
+F ~
+$ENDCMP
+#
+#End Doc Library

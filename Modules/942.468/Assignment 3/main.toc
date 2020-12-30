@@ -1,0 +1,74 @@
+\babel@toc {english}{}
+\contentsline {section}{Learning Outcome 1}{4}%
+\contentsline {section}{\numberline {1}Prime Movers}{4}%
+\contentsline {subsection}{\numberline {1.1}Medium Speed Four Stroke Engine}{4}%
+\contentsline {subsubsection}{\numberline {1.1.1}Principle of Operation}{6}%
+\contentsline {subsection}{\numberline {1.2}The Two Stroke Crosshead Engine}{6}%
+\contentsline {subsubsection}{\numberline {1.2.1}Principle of Operation}{8}%
+\contentsline {section}{\numberline {2}Auxiliary Machinery}{9}%
+\contentsline {subsection}{\numberline {2.1}Air Compressors}{9}%
+\contentsline {subsection}{\numberline {2.2}Fuel Oil}{10}%
+\contentsline {subsubsection}{\numberline {2.2.1}Fuel oil transfer system}{12}%
+\contentsline {subsubsection}{\numberline {2.2.2}Fuel tank overflow system}{12}%
+\contentsline {subsection}{\numberline {2.3}Lubricating Oil}{12}%
+\contentsline {subsection}{\numberline {2.4}Cooling Systems}{13}%
+\contentsline {subsection}{\numberline {2.5}Boilers}{14}%
+\contentsline {subsection}{\numberline {2.6}Fuel Temperature \& Viscosity Control}{15}%
+\contentsline {subsection}{\numberline {2.7}Cargo Refrigeration}{16}%
+\contentsline {subsection}{\numberline {2.8}Air Conditioning}{17}%
+\contentsline {section}{\numberline {3}Steering Gear}{18}%
+\contentsline {subsubsection}{\numberline {3.0.1}Ram Type Steering Gear System}{18}%
+\contentsline {subsection}{\numberline {3.1}Rotary Vane Steering Gear System}{20}%
+\contentsline {subsection}{\numberline {3.2}Chain Steering Gear System}{21}%
+\contentsline {section}{\numberline {4}Cargo Handling}{21}%
+\contentsline {subsection}{\numberline {4.1}Cranes}{21}%
+\contentsline {subsection}{\numberline {4.2}Forklifts}{22}%
+\contentsline {subsection}{\numberline {4.3}Bulk Handling}{22}%
+\contentsline {subsection}{\numberline {4.4}Roll-On Roll-Off}{22}%
+\contentsline {section}{\numberline {5}Hotel Systems}{23}%
+\contentsline {subsection}{\numberline {5.1}Medical Services}{23}%
+\contentsline {subsection}{\numberline {5.2}Galley Equipment}{23}%
+\contentsline {subsection}{\numberline {5.3}Networks}{24}%
+\contentsline {subsubsection}{\numberline {5.3.1}Internal}{24}%
+\contentsline {subsubsection}{\numberline {5.3.2}Ship Communication}{24}%
+\contentsline {subsubsection}{\numberline {5.3.3}CCTV}{24}%
+\contentsline {subsubsection}{\numberline {5.3.4}Intranet}{24}%
+\contentsline {subsubsection}{\numberline {5.3.5}External}{24}%
+\contentsline {subsubsection}{\numberline {5.3.6}Internet}{24}%
+\contentsline {subsection}{\numberline {5.4}Dynamic Positioning}{25}%
+\contentsline {subsection}{\numberline {5.5}Incinerator}{26}%
+\contentsline {subsection}{\numberline {5.6}Laundry Services}{26}%
+\contentsline {subsection}{\numberline {5.7}Elevators}{27}%
+\contentsline {section}{Learning Outcome 2}{28}%
+\contentsline {section}{\numberline {6}Glossary}{28}%
+\contentsline {subsection}{\numberline {6.1}Common Conversions \& Calculations}{30}%
+\contentsline {subsection}{\numberline {6.2}Ohm's Law Relationships}{30}%
+\contentsline {subsection}{\numberline {6.3}Joule's First Law}{30}%
+\contentsline {subsection}{\numberline {6.4}Impedance}{31}%
+\contentsline {subsection}{\numberline {6.5}Resistors in Parallel vs. Series}{32}%
+\contentsline {subsection}{\numberline {6.6}Energy}{35}%
+\contentsline {subsection}{\numberline {6.7}Metric Prefixes}{35}%
+\contentsline {subsection}{\numberline {6.8}AC vs DC}{35}%
+\contentsline {subsection}{\numberline {6.9}R.M.S.}{36}%
+\contentsline {section}{\numberline {7}Electromagnetic Induction}{37}%
+\contentsline {subsection}{\numberline {7.1}Fleming's Rule}{37}%
+\contentsline {subsection}{\numberline {7.2}Faraday's Law}{38}%
+\contentsline {subsection}{\numberline {7.3}Lenz's Law}{39}%
+\contentsline {section}{\numberline {8}Fundamentals of Electrical Machines}{39}%
+\contentsline {subsection}{\numberline {8.1}AC Electrical Machines}{40}%
+\contentsline {subsection}{\numberline {8.2}AC Generators}{40}%
+\contentsline {subsection}{\numberline {8.3}AC Motors}{41}%
+\contentsline {subsection}{\numberline {8.4}DC Electrical Machines}{42}%
+\contentsline {subsection}{\numberline {8.5}DC Generators}{42}%
+\contentsline {subsection}{\numberline {8.6}DC Motors}{44}%
+\contentsline {section}{\numberline {9}Transformers}{45}%
+\contentsline {section}{\numberline {10}Electrical Distribution}{47}%
+\contentsline {section}{\numberline {11}Automation}{47}%
+\contentsline {section}{\numberline {12}Alarm \& Monitoring Systems}{51}%
+\contentsline {section}{\numberline {13}Electrical Drives}{53}%
+\contentsline {subsection}{\numberline {13.1}Variable Frequency Drive}{53}%
+\contentsline {subsection}{\numberline {13.2}Synchroconverter}{54}%
+\contentsline {subsection}{\numberline {13.3}Cycloconverter}{55}%
+\contentsline {subsection}{\numberline {13.4}Eddy Current Drives}{56}%
+\contentsline {section}{\numberline {14}Coupling \& Load-sharing}{57}%
+\contentsline {section}{References}{59}%
