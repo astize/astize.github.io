@@ -1,5 +1,0 @@
-(page_layout
-  (setup (textsize 1.5 1.5)(linewidth 0.15)(textlinewidth 0.15)
-  (left_margin 10)(right_margin 10)(top_margin 10)(bottom_margin 10))
-  (rect (name rect1:Rect) (start 72.00220000000002 67.00719999999998) (end 8.002200000000016 4.007199999999983))
-)

@@ -1,3 +1,0 @@
-(sym_lib_table
-  (lib (name Distribution-rescue)(type Legacy)(uri ${KIPRJMOD}/Distribution-rescue.lib)(options "")(descr ""))
-)
