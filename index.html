@@ -9,7 +9,7 @@
 </head>
 <body id="body" onload="timeSince()" style="opacity:0;">
 <div id="main">
-<h1 class="strong">Levi Dubbelman <img src="lsd.svg" width="6.6%" /></h1>
+<h1 class="strong">Levi Dubbelman <a href="#" onclick="logoClick()"><img src="lsd.svg" width="6.6%" /></a></h1>
 <h2>Electro-Technical Officer <span class="minor soft">... for</span> <span class="minor soft" id="timeSince"></span></h2>
 <h3><div id="menu">
 <a id="self" href="#">About</a>
@@ -21,8 +21,9 @@
 <p>Kind Wishes,</p>
 <p>Levi Dubbelman</p>
 </div>
+<div id="shark" style="display:none;"><img src="shark.gif" /><img src="shark.gif" /><img src="shark.gif" /></div>
 <script>  
-        function timeSince() { 
+        function timeSince() {
             var fade = document.getElementById("body"); 
 			var fadeMenu = document.getElementById("menu"); 
             var opacity = 0; 
@@ -50,7 +51,14 @@
             }, 10); 
 			var timeSince = humanized_time_span("2019/02/03 08:30:00", "", custom_date_formats);
 			document.getElementById("timeSince").innerHTML = timeSince;
-        } 
+        }
+		function logoClick() {
+		if(document.getElementById('shark').style.display == 'none') {
+			document.getElementById('shark').style.display = 'block';
+		} else {
+			document.getElementById('shark').style.display = 'none';
+		}
+		}
 </script>
 <script src="time.js"></script> 
 </body>
