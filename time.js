@@ -78,3 +78,4 @@ function humanized_time_span(date, ref_date, date_formats, time_units) {
   }    
   return render_date(get_format());
 }
+

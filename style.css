@@ -78,3 +78,7 @@ p {
 .oblique {
 	font-style:oblique;
 }
+/* apply transition on the translate property */
+#rotate {
+	transition: transform 0.3s;
+}

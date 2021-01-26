@@ -9,14 +9,14 @@
 </head>
 <body id="body" onload="timeSince()" style="opacity:0;">
 <div id="main">
-<h1 class="strong">Levi Dubbelman <a href="#" onclick="logoClick()"><img src="lsd.svg" width="6.6%" /></a></h1>
+<h1 class="strong">Levi Dubbelman <a href="#" onclick="logoClick()"><img id="rotate" src="lsd.svg" width="6.6%" /></a></h1>
 <h2>Electro-Technical Officer <span class="minor soft">... for</span> <span class="minor soft" id="timeSince"></span></h2>
 <h3><div id="menu">
 <a id="self" href="#">About</a>
 <a href="work.html">Work</a>
 </div>
 </h3>
-<p>Hello, and welcome— to a personal webpage (graciously hosted by <a href="https://www.github.com/">GitHub</a>). Here you'll find a few of my previous works that you may find useful— such as my <a href="work.html">assignments</a> and their relevant modules from the now-defunct New Zealand Maritime School ETO programme.</p>
+<p>Hello, and welcome to my personal chunk of cyberspace. Here you'll find a few of my previous works that you may find useful— such as my <a href="work.html">assignments</a> and their relevant modules from the now-defunct NZ Maritime School ETO programme.</p>
 <p>If you're a former student of the Maritime school ETO or Engineering programmes click <a href="nzms/index.html" target="_blank">here</a> to see the current status of other cadets.</p>
 <p>Kind Wishes,</p>
 <p>Levi Dubbelman</p>
@@ -52,6 +52,7 @@
 			var timeSince = humanized_time_span("2019/02/03 08:30:00", "", custom_date_formats);
 			document.getElementById("timeSince").innerHTML = timeSince;
         }
+		
 		function logoClick() {
 		if(document.getElementById('shark').style.display == 'none') {
 			document.getElementById('shark').style.display = 'block';
@@ -59,7 +60,24 @@
 			document.getElementById('shark').style.display = 'none';
 		}
 		}
+			var current_rotation = 0;
+		function rotate() {
+		
+			current_rotation += 90;
+
+	// rotate clockwise by 90 degrees
+	document.querySelector("#rotate").style.transform = 'rotate(' + current_rotation + 'deg)';}
+
+		(function loop() {
+			var rand = Math.round(Math.random() * (8000 - 1000)) + 1000;
+			setTimeout(function() {
+					rotate();
+					loop();  
+    }, rand);
+}());
+
 </script>
 <script src="time.js"></script> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </body>
 </html>
