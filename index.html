@@ -9,75 +9,42 @@
 </head>
 <body id="body" onload="timeSince()" style="opacity:0;">
 <div id="main">
-<h1 class="strong">Levi Dubbelman <a href="#" onclick="logoClick()"><img id="rotate" src="lsd.svg" width="6.6%" /></a></h1>
+<h1 class="strong">Levi Dubbelman <a href="#" class="shake"><img id="rotate" onclick="logoClick()" src="lsd.svg" /></a></h1>
 <h2>Electro-Technical Officer <span class="minor soft">... for</span> <span class="minor soft" id="timeSince"></span></h2>
 <h3><div id="menu">
 <a id="self" href="#">About</a>
-<a href="work.html">Work</a>
+<a href="projects.html">Past Projects</a>
 </div>
 </h3>
-<p>Hello, and welcome to my personal chunk of cyberspace. Here you'll find a few of my previous works that you may find useful— such as my <a href="work.html">assignments</a> and their relevant modules from the now-defunct NZ Maritime School ETO programme.</p>
+<p>Hello, and welcome to my personal chunk of cyberspace. Here you'll find a few of my previous works that you may find useful, such as my <a href="work.html">assignments</a> and their relevant modules from the now-defunct NZ Maritime School ETO programme.</p>
 <p>If you're a former student of the Maritime school ETO or Engineering programmes click <a href="nzms/index.html" target="_blank">here</a> to see the current status of other cadets.</p>
 <p>Kind Wishes,</p>
 <p>Levi Dubbelman</p>
 </div>
 <div id="shark" style="display:none;"><img src="shark.gif" /><img src="shark.gif" /><img src="shark.gif" /></div>
 <script>  
-        function timeSince() {
-            var fade = document.getElementById("body"); 
-			var fadeMenu = document.getElementById("menu"); 
-            var opacity = 0; 
-			var opacityMenu = 0;
-			var custom_date_formats = {
-				past: [
-					{ ceiling: null, text: "$years years, $months months and $days days." }
-					]
-			}
-            var intervalID = setInterval(function() { 
-                if (opacity < 1) { 
-                    opacity = opacity + 0.02
-                    fade.style.opacity = opacity; 
-                } else { 
-                    clearInterval(intervalID); 
-                } 
-            }, 10); 
-			var intervalB = setInterval(function() { 
-                if (opacityMenu < 1) { 
-                    opacityMenu = opacityMenu + 0.01
-                    fadeMenu.style.opacity = opacityMenu; 
-                } else { 
-                    clearInterval(intervalB); 
-                } 
-            }, 10); 
-			var timeSince = humanized_time_span("2019/02/03 08:30:00", "", custom_date_formats);
-			document.getElementById("timeSince").innerHTML = timeSince;
-        }
-		
-		function logoClick() {
-		if(document.getElementById('shark').style.display == 'none') {
-			document.getElementById('shark').style.display = 'block';
-		} else {
-			document.getElementById('shark').style.display = 'none';
-		}
-		}
 			var current_rotation = 0;
+			var items = [90,-90];
 		function rotate() {
-		
-			current_rotation += 90;
+			
+			current_rotation += $.rand(items);
 
-	// rotate clockwise by 90 degrees
-	document.querySelector("#rotate").style.transform = 'rotate(' + current_rotation + 'deg)';}
+			// rotate clockwise by X degrees
+			document.querySelector("#rotate").style.transform = 'rotate(' + current_rotation + 'deg)';}
 
 		(function loop() {
 			var rand = Math.round(Math.random() * (8000 - 1000)) + 1000;
 			setTimeout(function() {
 					rotate();
+					console.log($.rand(items));
 					loop();  
     }, rand);
 }());
-
 </script>
-<script src="time.js"></script> 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="time.js"></script> 
+<script src="timeSince.js"></script>
+<script src="logoClick.js"></script>
+<script src="rotateRandom.js"></script>
 </body>
 </html>
