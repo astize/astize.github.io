@@ -1,23 +1,35 @@
 body {
-	font-size: 18px;
-	margin-left:auto;
-	margin-right:auto;
-	width: 100%;
+	font-size: 24px;
+	margin: 0 0 0 0;
 }
 p {
-	padding-top: 750px;
-	padding-left:200px;
+	padding-top:0px;
 	font-size: 64px;
-	width:880px;
+	padding-top:0mm;
+	padding-left: 24mm;
+	padding-right: 6mm;
+	padding-bottom: 6mm;
 }
 .output {
-	background-image: url("sfw.png");
-	height: 1566px;
-	width: 1095px;
+	background-image: url("sfw.jpg");
 	background-repeat: no-repeat;
+	width:105mm;
+	height:148mm;
+	background-size: 100%;
+	padding: 0 0 0 0;
+	margin: 0 0 0 0;
 }
 @media print {
 .topbar {
 	display: none !important;
 }
+}
+@page {
+	size: A6 portrait;
+}
+.date {
+	display:block;
+	text-align:center;
+	padding-top: 50mm;
+	padding-left: 75mm;
 }

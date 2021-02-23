@@ -1,5 +1,7 @@
 const randomize = document.querySelector('.randomize');
 const story = document.querySelector('.story');
+const date = document.querySelector(".date");
+
 
 function randomValueFromArray(array){
   const random = Math.floor(Math.random()*array.length);
@@ -38,9 +40,11 @@ let equipment = [
 	"forward fuel module",
 	"lathe",
 	"drill press",
-	"grinder",
+	"intering valve",
 	"starboard stabilizer",
 	"crew mess dishwasher",
+	"plus lounge urinal",
+	"Client 1",
 ];
 let conversation = [
 	"toolbox talk was held",
@@ -74,6 +78,7 @@ let pointA = [
 	": danger of electrocution",
 	": risk of electrocution",
 	": possibility of a shock hazard",
+	": dangers of working from heights",
 ];
 let pointB = [
 	" ",
@@ -103,12 +108,12 @@ let pointD = [
 	" ",
 	" ",
 	", slip and fall hazards",
-	", dangerous heights",
 	", mislabelled equipment",
 	", improperly secured gear",
 	", working in a rough sea state",
 	", danger of working on a ladder",
 	", the importance of correct labelling",
+	", sharp edges",
 ]
 let namesA = [
 	"Chief Engineer",
@@ -296,9 +301,24 @@ let stupidE = [
 	
 
 randomize.addEventListener('click', result);
+function randomDate(date1, date2){
+	
+    function randomValueBetween(min, max) {
+      return Math.random() * (max - min) + min;
+    }
+    var date1 = date1 || '01-01-1970'
+    var date2 = date2 || new Date().toLocaleDateString()
+    date1 = new Date(date1).getTime()
+    date2 = new Date(date2).getTime()
+    if(date1>date2){
+        return new Date(randomValueBetween(date2,date1)).toLocaleDateString('en-NZ',{day: "numeric", month: "short"});  
+    } else{
+        return new Date(randomValueBetween(date1, date2)).toLocaleDateString('en-NZ');
+    }
+}
 
 function result() {
-	
+  let dateSet = "A6<br>" + randomDate('Feb 22 2021', 'Feb 10 2021');
   let newStory = storyText;
   let newStoryB = storyTextB;
   let newStoryC = storyTextC;
@@ -365,26 +385,42 @@ function result() {
   newStoryD = newStoryD.replace(':pointD:',storyAitemH);
   
 if(document.getElementById("font1").checked) {
-	  document.querySelector('p').style.fontFamily = "Just Me Again Down Here,arial";
+	  document.querySelector('span').style.fontFamily = "Beth Ellen,arial";
+	  document.querySelector('span').style.fontSize = "14px";
+	  document.querySelector('p').style.fontFamily = "Beth Ellen,arial";
+	  document.querySelector('p').style.fontSize = "14px";
 } else if(document.getElementById("font2").checked) {
-	  document.querySelector('p').style.fontFamily = "Long Cang,arial";
+	  document.querySelector('span').style.fontFamily = "Dawning of a New Day,arial";
+	  document.querySelector('span').style.fontSize = "20px";
+	  document.querySelector('p').style.fontFamily = "Dawning of a New Day,arial";
+	  document.querySelector('p').style.fontSize = "20px";
 } else if(document.getElementById("font3").checked) {
-	  document.querySelector('p').style.fontFamily = "Indie Flower,arial";
+	  document.querySelector('span').style.fontFamily = "Over the Rainbow,arial";
+	  document.querySelector('span').style.fontSize = "15px";
+	  document.querySelector('p').style.fontFamily = "Over the Rainbow,arial";
+	  document.querySelector('p').style.fontSize = "15px";
 } else if(document.getElementById("font4").checked) {
-	  document.querySelector('p').style.fontFamily = "Gochi Hand,arial";
+	  document.querySelector('span').style.fontFamily = "Liu Jian Mao Cao,arial";
+	  document.querySelector('span').style.fontSize = "14px";
+	  document.querySelector('p').style.fontFamily = "Liu Jian Mao Cao,arial";
+	  document.querySelector('p').style.fontSize = "14px";
 }
  
 if(document.getElementById("story1").checked) {
-  story.textContent = newStory;
-  story.style.visibility = 'visible';
+	date.innerHTML = dateSet;
+	story.textContent = newStory;
+	story.style.visibility = 'visible';
 } else if(document.getElementById("story2").checked) {
+	date.innerHTML = dateSet;
 	story.textContent = newStoryB;
 	story.style.visibility = 'visible';
 } else if(document.getElementById("story3").checked) {
-story.textContent = newStoryC;
-  story.style.visibility = 'visible';
+	date.innerHTML = dateSet;
+	story.textContent = newStoryC;
+	story.style.visibility = 'visible';
 } else if(document.getElementById("story0").checked) {
-story.textContent = newStoryD;
-story.style.visibility = 'visible';
+	date.innerHTML = dateSet;
+	story.textContent = newStoryD;
+	story.style.visibility = 'visible';
 }
 }
